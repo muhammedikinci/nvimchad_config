@@ -30,6 +30,7 @@ M.mason = {
     "deno",
     "prettier",
     "gopls",
+    "golangcilint",
   },
 }
 
