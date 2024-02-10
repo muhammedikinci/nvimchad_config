@@ -9,7 +9,6 @@ M.treesitter = {
     "javascript",
     "typescript",
     "tsx",
-    "c",
     "markdown",
     "markdown_inline",
   },
@@ -23,30 +22,21 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
-    -- lua stuff
     "lua-language-server",
     "stylua",
-
-    -- web dev stuff
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
     "deno",
     "prettier",
-
-    -- c/cpp stuff
-    --"clangd",
-    --"clang-format",
     "gopls",
   },
 }
 
--- git support in nvimtree
 M.nvimtree = {
   git = {
     enable = true,
   },
-
   renderer = {
     highlight_git = true,
     icons = {
