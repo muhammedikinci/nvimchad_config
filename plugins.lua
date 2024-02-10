@@ -1,4 +1,4 @@
-local overrides = require("custom.configs.overrides")
+local overrides = require "custom.configs.overrides"
 local plugins = {
   {
     "neovim/nvim-lspconfig",
@@ -9,7 +9,7 @@ local plugins = {
   },
   {
     "williamboman/mason.nvim",
-    opts = overrides.mason
+    opts = overrides.mason,
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -36,6 +36,13 @@ local plugins = {
   {
     "tpope/vim-fugitive",
     lazy = false,
+  },
+  {
+    "mfussenegger/nvim-lint",
+    event = { "BufWritePre", "BufNewFile" },
+    config = function()
+      require "custom.configs.nvim-lint"
+    end,
   },
 }
 
