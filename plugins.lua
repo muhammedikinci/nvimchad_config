@@ -28,15 +28,9 @@ local plugins = {
   },
   {
     "stevearc/conform.nvim",
+    event = { "BufWritePre", "BufNewFile" },
     config = function()
       require "custom.configs.conform"
-    end,
-  },
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = "go",
-    opts = function()
-      return require("custom.configs.null-ls")
     end,
   },
   {
