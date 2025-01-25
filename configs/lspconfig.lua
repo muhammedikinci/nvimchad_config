@@ -19,3 +19,9 @@ lspconfig.gopls.setup {
     },
   },
 }
+
+lspconfig.omnisharp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "/usr/local/bin/omnisharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) },
+}
